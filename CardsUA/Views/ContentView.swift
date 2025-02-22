@@ -41,39 +41,6 @@ struct ContentView: View {
     }
 } 
 
-struct WordCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        // Приклад слова для прев'ю
-        let sampleWord = Word(
-            id: 1,
-            word: "Hello",
-            translation: "Привіт",
-            type: "Greeting",
-            cefr: "A1",
-            phon_br: "/həˈləʊ/",
-            phon_n_am: "/hɛˈloʊ/",
-            definition: "A common greeting",
-            example: "Hello, how are you?"
-        )
-        
-        let sampleWord2 = Word(
-            id: 2,
-            word: "Goodbye",
-            translation: "До побачення",
-            type: "Farewell",
-            cefr: "A1",
-            phon_br: "/ɡʊdˈbaɪ/",
-            phon_n_am: "/ɡʊdˈbaɪ/",
-            definition: "A common farewell",
-            example: "Goodbye, see you later!"
-        )
-        
-        
-        // Показуємо WordCardView з прикладом слова
-        WordCardView(word: sampleWord)
-            .padding()
-    }
-}
 
 // MARK: - Прев'ю для ContentView
 
