@@ -42,16 +42,4 @@ struct ContentView: View {
 } 
 
 
-// MARK: - Прев'ю для ContentView
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        // Створюємо пустий контейнер для SwiftData (в пам'яті)
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
-        let container = try! ModelContainer(for: Word.self, configurations: config)
-        
-        // Показуємо ContentView з контейнером
-        ContentView()
-            .modelContainer(container)
-    }
-}
