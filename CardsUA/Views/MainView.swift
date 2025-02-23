@@ -13,7 +13,7 @@ struct MainView: View {
                         Label("Flashcards", systemImage: "rectangle.stack")
                     }
                     
-                    NavigationLink(destination: Text("Dictionary View")) {
+                    NavigationLink(destination: DictionaryView()) {
                         Label("Dictionary", systemImage: "book")
                     }
                     
@@ -44,8 +44,8 @@ struct MainView: View {
 
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: Word.self, configurations: config)
+    let container = try! ModelContainer(for: Word.self, Level.self, configurations: config)
     
-    return MainView()
+    MainView()
         .modelContainer(container)
 } 

@@ -9,8 +9,8 @@ import SwiftData
 struct WordsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
-        .modelContainer(for: Word.self)
+        .modelContainer(for: [Word.self, Level.self])
     }
 }
