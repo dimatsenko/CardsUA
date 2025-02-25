@@ -21,8 +21,7 @@ class Word: Identifiable {
     var phon_n_am: String
     var definition: String
     var example: String
-    var isLearning: Bool = false
-    var isSkipped: Bool = false
+  
 
     init(id: Int, word: String, translation: String, type: String, cefr: String, phon_br: String, phon_n_am: String, definition: String, example: String) {
         self.id = id

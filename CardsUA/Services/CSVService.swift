@@ -37,6 +37,7 @@ class CSVService {
         return result
     }
     
+    @MainActor
     func importWords(modelContext: ModelContext) async throws {
         guard let fileUrl = Bundle.main.url(forResource: "Words", withExtension: "csv") else {
             throw CSVError.fileNotFound
@@ -61,6 +62,7 @@ class CSVService {
         try modelContext.save()
     }
     
+    @MainActor
     private func processRow(columns: [String], modelContext: ModelContext) async throws {
         let cleanedColumns = columns.map {
             $0.trimmingCharacters(in: .whitespacesAndNewlines)

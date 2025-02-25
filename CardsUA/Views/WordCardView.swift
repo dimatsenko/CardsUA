@@ -60,6 +60,7 @@ struct WordCardView: View {
             }
             // Кнопка відтворення (передбачено додавання дії)
             Button(action: {
+                AudioService.shared.speak(word.word)
             }) {
                 Image(systemName: "play")
                     .font(.system(size: 36, weight: .semibold))
@@ -103,8 +104,6 @@ struct WordCardView: View {
             
         }
     }
-    
- 
 }
 
 

@@ -48,4 +48,4 @@ struct MainView: View {
     
     MainView()
         .modelContainer(container)
-} 
+}
